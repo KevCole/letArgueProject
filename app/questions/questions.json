@@ -1,0 +1,37 @@
+ [{
+         "id": 1,
+         category: "Movies",
+         question: "Do You See any Teletubbies in here?",
+         answer: ["Yes", "No", "Maybe"],
+
+     },
+     {
+         "id": 2,
+         category: "Movies",
+         question: "Do you see a slender plastic tag clipped to my shirt with my name printed on it?",
+         answer: ["Yes", "No", "Maybe"],
+
+
+     },
+     {
+         "id": 3,
+         category: "Movies",
+         question: "Ya' smoke crack don't ya?",
+         answer: ["Naive", "No", "It's just a movie bruh"],
+
+     },
+     {
+         "id": 4,
+         category: "Movies",
+         question: "You Told Harpo to beat me?",
+         answer: ["blah", "No", "Yes"],
+
+     },
+     {
+         "id": 5,
+         category: "Movies",
+         question: "You think water moves fast?",
+         answer: ["Yes", "No", "It's slow"],
+
+     }
+ ]

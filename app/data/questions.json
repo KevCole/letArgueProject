@@ -1,0 +1,303 @@
+[
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Rank these Comedies from Greatest to Least",
+    "Options": ["Anchor Man", "Borat", "Office Space", "Neighbors", "The 40 Year Old Virgin"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Stoner Movie?",
+    "Options": ["Harold and Kumar go to White Castle", "How High", "Half Baked Dude", "Where's My Car"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Which of House Party is considered the Best?",
+    "Options": ["House Party", "House Party 2", "House Party 3", "House Party 4"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Hangover Movie?",
+    "Options": ["The Hangover", "The Hangover Part II", "The Hangover Part III"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Top Rated Chick Comedy?",
+    "Options": ["BridesMaids", "BrideWars", "27 Dresses", "How to Be Single", "Bad Moms", "Girls Trip"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Most overrated High School Themed Comedy?",
+    "Options": ["She's All That", "Not Another Teen Movie", "Mean Girls", "American Pie", "Superstar"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Worst Austin Powers Movie?",
+    "Options": ["Austin Powers: International Man of Mystery", "Austin Powers: The Spy Who Shagged Me", "Austin Powers in Goldmember"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Which Friday movie made you wish that they would have stopped with the first Friday?",
+    "Options": ["Friday", "Next Friday", "Friday After Next", "Last Friday"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Top 3 Comedians to successfully transition from the stage to the big screen?",
+    "Options": ["Kevin Hart", "Eddie Murphy", "Martin Lawrence", "Jim Carey", "Jamie Fox", "Zach Galifianakis"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Worst Comedy movie?",
+    "Options": ["The Water Boy", "White Chicks", "Dumb and Dummer", "Zoolander", "Little Man"],
+    "Category": "Comedy"
+  },
+  {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Christmas Comedy movie?",
+    "Options": ["The Night Before", "This Christmas", "Almost Christmas", "Bad Santa", "Elf", "Office Christmas Party"],
+    "Category": "Comedy"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Rank These Chris Rock Comedies from Greatest to Least",
+    "Options": ["I think I love My Wife", "Head of State", "Top Five", "Death at a Funeral"],
+    "Category": "Comedy"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Rank these Drama films from Least to Greatest",
+    "Options": ["Pursuit of Happyness", "Crash", "The Help", "Forrest Gump", "American Sniper"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Ganster Drama?",
+    "Options": ["The Godfather", "Gangs of New York", "American Ganster", "Dead Presidents", "Black Mass"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Worst Romance Drama?",
+    "Options": ["50 Shades of Grey", "Beyond the Lights", "The Notebook"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Sports Drama Movie?",
+    "Options": ["Love and Basketball", "Just Wright", "Million Dollar Baby", "Any Given Sunday", "Field of Dreams"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Worst Biopic Drama?",
+    "Options": ["Ali", "42", "We are the Titans", "All Eyes on Me", "Notorious", "Selma", "Selena"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which movie should have gone straight to DVD?",
+    "Options": ["The Perfect Guy", "Just Go With It", "All of the Madea Movies", "Hitch", "Crazy Stupid Love", "Baggage Claim", "Valentine's Day "],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which movie is likely to make you cry?",
+    "Options": ["The Notebook", "Titanic", "The Lion King", "Imitation of Life"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which movie caused the most public controversy?",
+    "Options": ["Do the Right Thing", "Passion the Christ", "Crash", "Birth of a Nation,"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which movie would make you say I give up on watching the Drama movies",
+    "Options": ["Gigli", "Honey", "White Chicks", "The Perfect Guy"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which movie made you say \"I should have waiting until this movie came on tv\"?",
+    "Options": ["Obsessed", "You Got Served", "Save the Last Dance", "The Roommate"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Rank these movies by Best Couple ",
+    "Options": ["Allie and \"Noah The Notebook\"", "Latika and Jamal \"Slumdog Millionaire\"", "Carrie and Big \"Sex and The City\"", "Barrack and Michelle \"Southside with You\"", "Hitch and \"Sara Melas \""],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which movie made you walk out of the movie theater and why",
+    "Options": ["Jack and Jill", "Cloverfield", "127 Hours", "Traffic"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best movie with an Education plot?",
+    "Options": ["Higher learning", "Dangerous minds", "Lean on me"],
+    "Category": "Drama"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Comic Book Movie?",
+    "Options": ["Black Panther", "The Dark Knight", "The Hulk", "Thor", "Wonder Woman", "Dead Pool", "Wolverine", "Spiderman", "Iron Man"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Movie that can be seen multiple times in the theater",
+    "Options": ["Fast and Furious", "Transformers", "Avatar", "All of the Marvel Comic Movies,"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Movie that made you say \"How is this an action movie\"?",
+    "Options": ["After Earth","The Fifth element","Shaq as Steel","Total Recall"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Animal Action Movie/Series?",
+    "Options": ["Jurrasic Park", "Planet of the Apes", "Eight Legged Freaks"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best movie of the \"Taken\" trilogy?",
+    "Options": ["Taken", "Taken 2", "Taken 3"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Solo Actor Movie?",
+    "Options": ["Phone Booth", "I am Legend", "Cast Away", "The Martian"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Weirdest Action Movie?",
+    "Options": ["NightCrawler", "Cowboys and Aliens", "Gardians of the Galaxy", "Lucy "],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which movie made you say \"why do they remake this movie\"?",
+    "Options": ["Baywatch", "Mighty Morphing Power Rangers", "Teenage Mutan Ninja Turtles", "Jumanji"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Heist Movie?",
+    "Options": ["Heist", "Takers", "Inside Man", "Set It Off"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Female Action movie ",
+    "Options": ["Wonder Woman", "Cat Woman", "Salt", "Underworld", "Atomic Blonde", "Ghost in a Shell"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Would you rather play the hero or the vilan in these movies",
+    "Options": ["Black Panther", "The Matrix", "X-Men", "The Dark Knight"],
+    "Category": "Action"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which movie is the scariest?",
+    "Options": ["The conjuring", "Sinister", "Insidious"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Who is better",
+    "Options": ["Freddie", "Jason"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best movie of 'The Ring' trilogy?",
+    "Options": ["The Ring", "The Ring Two", "The Ring 3"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Worst horror movie ",
+    "Options": ["Scream", "House of Wax", "Saw", "Paranormal Activity"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which movie is scarier",
+    "Options": ["Monster movies", "Spirit (ghost) movies"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Haunted Movie?",
+    "Options": ["Insidious", "The Counjuring", "Annabell"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Chucky movie",
+    "Options": ["Child's Play 1 - 3", "Bride of Chucky", "Seed of Chucky", "Curse of Chucky", "Cult of Chucky"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Weidest Horror film",
+    "Options": ["It follows", "The Mimic", "The Relic", "Jennifer's Body,"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best \"IT\" movie?",
+    "Options": ["The originals made in the 1970s", "The remakes made in the 2000s"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Worst Jeepers Creepers movie?",
+    "Options": ["Jeepers Creepers (2001)", "Jeepers Creepers 2", "Jeepers Creepers 3"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Rank these possession movies",
+    "Options": ["The Exorcist", "The Rite", "The Possession", "Deliver Us From Evil"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Top Rated horror film of all time",
+    "Options": ["Get Out", "Psycho", "Halloween", "Nightmare of Elm Street", "A Quiet Place"],
+    "Category": "Horror"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best vesion of Star Wars",
+    "Options": ["Series from the 1980s", "Series from the 2000s"],
+    "Category": "Sci-Fi"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Grosses Sci-Fi movie",
+    "Options": ["Alien", "Pormetheus", "The Mimic", "Life"],
+    "Category": "Sci-Fi"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Weirdest combination Sci-Fi movie?",
+    "Options": ["Sharknado", "Velocimoose", "Zombeavers", "Iraniconda"],
+    "Category": "Sci-Fi"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Coolest Sci-Fi movie",
+    "Options": ["Avatar", "The Matrix", "Starship Troopers", "Ex Machina"],
+    "Category": "Sci-Fi"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Which Terminator Movie made you say \"why is there another terminator\"?",
+    "Options": ["The Terminator,Terminator 2: Judgment Day,Terminator 3: Rise of the Machines,Terminator Salvation,The Terminators,Terminator Genisys,Terminator 6"],
+    "Category": "Sci-Fi"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Robot Movie?",
+    "Options": ["I Robot", "Ex Machina", "Chapie", "Transformers", "Pacific Rim"],
+    "Category": "Sci-Fi"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Rank these 90s Sci-Fi films from Greatest to Least",
+    "Options": ["The Matrix","Independent Day", "Stargate", "Alien 3", "The Fifth Element", "Total Recall"],
+    "Category": "Sci-Fi"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Best Sci-Fi Movie of the 21st Century",
+    "Options": ["Guardians of the Galaxy", "The Planet of the Apes", "Cloverfield", "A.I. Artificial Intelligence", "Looper"],
+    "Category": "Sci-Fi"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Worst Alien Movie",
+    "Options": ["Alien: Covenant", "Alien Vs Predator", "Alien: Resurrection", "Prometheus"],
+    "Category": "Sci-Fi"
+  }, {
+    "Card_Deck_Title": "Movies",
+    "question": "Overrated SYFY movie",
+    "Options": ["Looper", "Her", "I Am Legend", "Signs", "World War Z"],
+    "Category": "Sci-Fi"
+  }
+]
