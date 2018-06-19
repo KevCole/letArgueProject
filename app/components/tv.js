@@ -1,47 +1,93 @@
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import data from '../questions/questions.json';
-
+import { StyleSheet, Text, View, Image, TouchableOpacity, Button, ImageBackground } from 'react-native';
+import shuffle from 'lodash/shuffle';
+import data from '../data/questions.json';
 import SwipeCards from 'react-native-swipe-cards';
+import CountdownCircle from 'react-native-countdown-circle'
+import SwitchToggle from 'react-native-switch-toggle';
 
 
+
+const shuffledData = shuffle(data);
+
+
+Play = ({ child }) => {
+  return (
+    <View>
+      <Text style={styles.playButton}> {child} </Text>
+    </View>
+  )
+}
 
 class Card extends React.Component {
   constructor(props) {
     super(props);
+
   }
+
 
   render() {
     return (
-      <View style={styles.card}>
-        <Text style={styles.questions}>{this.props.question}</Text>
+      <View style={styles.clockContainer}>
+        {
+          this.props.clockStatus ? <CountdownCircle
+            seconds={60}
+            reStart={true}
+            radius={40}
+            borderWidth={9}
+            color="#4B4DAA"
+            shadowColor="#F4CB54"
+            bgColor="#4B4DAA"
+            textStyle={{ fontSize: 30, color: "white" }}
+
+          /> : null
+        }
+
+        <View style={styles.card}>
+          <Text style={styles.questions}>{this.props.question}</Text>
+
+
+          {/* Answer View*/}
+          {this.props.toggleAnswers ?
+            <View style={styles.showAnswers}>
+              <Text style={styles.answers}>{this.props.Options[0]} </Text>`
+                <Text style={styles.answers}>{this.props.Options[1]}</Text>
+              <Text style={styles.answers}>{this.props.Options[2]}</Text>
+              <Text style={styles.answers}>{this.props.Options[3]}</Text>
+            </View> : null}
+
+
+        </View>
+        )
+      }
+       <TouchableOpacity style={[styles.playButtonView, styles.buttonViewStateChange]} onPress={this.props.triggerToggleQuestions}>
+
+          {
+            this.props.isHidden ? <Text style={styles.playButton}> {this.props.playState} </Text> : null
+          }
+
+
+
+        </TouchableOpacity>
       </View>
     )
   }
 }
 
-class NoMoreCards extends Component {
-  constructor(props) {
-    super(props);
-  }
 
-  render() {
-    return (
-      <View style={styles.screen}>
-        <Text style={styles.noMoreCardsText}>Start again?</Text>
-      </View>
-    )
-  }
-}
-
-export default class extends React.Component {
+class tv extends Component {
 
 
   constructor(props) {
     super(props);
     this.state = {
-      data: data
+      data: shuffledData,
+      hello: "hello",
+      playState: "Play?",
+      toggleAnswers: false,
+      isHidden: true,
+      clockStatus: false
     };
   }
   static navigationOptions = {
@@ -49,19 +95,56 @@ export default class extends React.Component {
       backgroundColor: '#4B4DAA',
     }
   };
+
+  toggleQuestions = () => {
+    this.setState({
+      toggleAnswers: true,
+      isHidden: false,
+      clockStatus: true
+    })
+  }
+
+  sorry = () => {
+    this.setState({
+      hide: false,
+      hello: ""
+    })
+  }
+
+  reset = () => {
+    this.setState({
+      playState: "Play?",
+      toggleAnswers: false,
+      isHidden: true,
+      clockStatus: false
+    })
+  }
+
   render() {
-    // If you want a stack of cards instead of one-per-one view, activate stack mode
+    // If you want a stack of  s instead of one-per-one view, activate stack mode
     // stack={true}
     return (
       <View style={styles.screen}>
         <SwipeCards
           cards={this.state.data}
-          renderCard={(cardData) => <Card {...cardData} />}
-          renderNoMoreCards={() => <NoMoreCards />}
+          renderCard={(cardData) =>
+            <Card
+              isHidden={this.state.isHidden}
+              clockStatus={this.state.clockStatus}
+              playState={this.state.playState}
+              toggleAnswers={this.state.toggleAnswers}
+              clockStatus={this.state.clockStatus}
+              triggerToggleQuestions={this.toggleQuestions}
+              {...cardData} />}
           showMaybe={false}
           showNope={false}
           showYup={false}
+          smoothTransition={false}
+          handleNope={this.reset}
+          handleYup={this.reset}
         />
+
+
       </View>
     )
   }
@@ -74,6 +157,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  clockContainer: {
+    marginTop: 20,
+    alignItems: "center",
   },
   card: {
     flex: 0,
@@ -96,10 +183,46 @@ const styles = StyleSheet.create({
     color: '#FAFAFF',
     textAlign: 'left'
   },
+answers:{
+  fontSize: 21,
+    width: 300,
+    padding: 1.5,
+    fontWeight: 'bold',
+    fontFamily: 'Helvetica',
+    justifyContent: "flex-start",
+    color: '#FAFAFF',
+    textAlign: "left",
+    marginRight: 200,
+    borderColor: "transparent"
+  },
   noMoreCardsText: {
     fontSize: 22,
   },
   linear:{
     flex: 1
-  }
+  },
+  playButtonView: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: "center",
+  
+  },
+showAnswers: {
+  marginTop: 50,
+},
+playButton: {
+  fontSize: 25,
+  fontWeight: 'bold',
+  fontFamily: 'Helvetica',
+  marginTop: 20,
+  padding: 10,
+  width: 150,
+  borderRadius: 10,
+  textAlign: "center",
+  color: "#FAFAFF",
+  borderWidth: 2,
+  borderColor: "#FFFFFF"
+},
+
 });
+export default tv

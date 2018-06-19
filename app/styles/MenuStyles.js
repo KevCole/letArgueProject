@@ -7,21 +7,12 @@ export const styles = StyleSheet.create({
         flex: 1,
         padding: 25,
         backgroundColor: '#4861C9',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-
-
-
-
+    
     },
     text: {
-        alignItems: "center",
         fontFamily: fonts.primary,
-        fontSize: 30,
+        fontSize: 50,
         color:'#F0FFF0',
-        justifyContent: "center"
-
+        
     },
-
 })

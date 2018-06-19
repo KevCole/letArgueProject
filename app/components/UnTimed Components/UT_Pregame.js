@@ -63,7 +63,7 @@ class Card extends React.Component {
 }
 
 
-class UT_movies extends Component {
+class UT_pregame extends Component {
 
 
   constructor(props) {
@@ -79,7 +79,7 @@ class UT_movies extends Component {
   }
   static navigationOptions = {
     headerStyle: {
-      backgroundColor: '#F35555',
+      backgroundColor: '#F5A974',
     }
   };
 
@@ -140,7 +140,7 @@ class UT_movies extends Component {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#F35555',
+    backgroundColor: '#F5A974',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     height: 350,
     padding: 30,
     borderRadius: 30,
-    backgroundColor: '#736BC0',
+    backgroundColor: '#499A8F',
     shadowColor: 'rgba(0, 0, 0, .5)',
     shadowOffset: { width: 30, height: 30 },
     shadowOpacity: 3,
@@ -212,4 +212,4 @@ const styles = StyleSheet.create({
   },
 
 });
-export default UT_movies
+export default UT_pregame

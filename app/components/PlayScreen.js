@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity, ImageBackground } from 'react-native';
 
 import { styling } from '../styles/PlayScreenStyles';
 
@@ -34,14 +34,14 @@ export class PlayScreen extends Component {
 
     static navigationOptions = {
         headerTitle: "Categories",
-        headerStyle: {
-
+        headerStyle: { 
+            backgroundColor: '#E858C4'
         }
     };
 
     render() {
         return (
-
+    <ImageBackground source={ require ( '../images/purple_teal.jpg')} style={styles.screen}>
             <ScrollView
                 ref={(scrollView) => { this.scrollView = scrollView; }}
                 style={styles.container}
@@ -69,8 +69,11 @@ export class PlayScreen extends Component {
                 <TouchableOpacity style={styles.view3} onPress={() => this.props.navigation.navigate('TV')}>
                     <Text style={styling.question}>TV</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.view4} onPress={() => this.props.navigation.navigate('Mixed')}>
-                    <Text style={styling.question}>Mixed</Text>
+                <TouchableOpacity style={styles.view4} onPress={() => this.props.navigation.navigate('Sports')}>
+                    <Text style={styling.question}>Sports</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.view5} onPress={() => this.props.navigation.navigate('Pregame')}>
+                    <Text style={styling.question}>PreGame</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.view4} onPress={() => this.props.navigation.navigate('Tester')}>
@@ -78,13 +81,24 @@ export class PlayScreen extends Component {
                     <Text>Show</Text>
 
                 </TouchableOpacity>
-            </ScrollView>
+                </ScrollView>
+    </ImageBackground>
+            
+            
 
         );
     }
 }
 
 const styles = StyleSheet.create({
+    screen: {
+        flex: 1,
+        backgroundColor: '#F35555',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+    
+      },
     view: {
         marginTop: 150,
         margin: 10,
@@ -132,6 +146,19 @@ const styles = StyleSheet.create({
         padding: 30,
         borderRadius: 20,
         backgroundColor: '#44C344',
+        shadowColor: 'rgba(0, 0, 0, .5)',
+        shadowOffset: { width: 30, height: 30 },
+        shadowOpacity: 3,
+        shadowRadius: 20
+    },
+    view5: {
+        marginTop: 150,
+        margin: 10,
+        width: width - 75,
+        height: height - 400,
+        padding: 30,
+        borderRadius: 20,
+        backgroundColor: '#F5A974',
         shadowColor: 'rgba(0, 0, 0, .5)',
         shadowOffset: { width: 30, height: 30 },
         shadowOpacity: 3,

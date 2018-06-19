@@ -7,14 +7,21 @@ import { styles } from './app/styles/MenuStyles'
 import { styling } from './app/styles/PlayScreenStyles'
 import { dimensions, colors, fonts } from './app/styles/base';
 
-import settings from './app/components/settings'
+
 import movies from './app/components/movies'
-import mixed from './app/components/mixed'
+import sports from './app/components/sports'
 import music from './app/components/music'
 import tv from './app/components/tv'
+import UT_movies from './app/components/UnTimed Components/UT_movies'
+import pregame from './app/components/pregame'
+import UT_pregame from './app/components/UnTimed Components/UT_Pregame'
 import tester from './app/components/tester'
 import whichGame from './app/components/whichGame'
 import UTplayScreen from './app/components/UnTimed Components/UT_PlayScreen'
+import How_To_Play from './app/components/how_to_play';
+import Team_Play_Rules from './app/components/Team_Play_Rules'
+import Free_Play_Rules from './app/components/Free_Play_Rules'
+
 
 const data = require('./app/questions/questions.json');
 const remote = "./app/images/toronto.jpg"
@@ -22,35 +29,23 @@ const remote = "./app/images/toronto.jpg"
 class HomeScreen extends Component {
   static navigationOptions = {
     headerStyle: {
-      backgroundColor: '#4861C9'
+      backgroundColor: '#367AFC'
     }}
   render() {
-
-    
-  
-    
-    
     return (
-      <View style={styles.container}>
-      
+      <ImageBackground source={ require( './app/images/Blue_white.jpg')} style={Thestyles.screen}>
+      <View>
           <TouchableOpacity onPress={() => this.props.navigation.navigate('WhichGame')}>
             <Text style={styles.text}>
               Play
           </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('How To Play')} >
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('HowToPlay')} >
             <Text style={styles.text}>
               How To Play
           </Text>
           </TouchableOpacity>
-
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('Settings')} >
-            <Text style={styles.text}>
-              Settings
-          </Text>
-          </TouchableOpacity>
-
           <TouchableOpacity onPress={() => this.props.navigation.navigate('About')}  >
             <Text style={styles.text}>
               About
@@ -58,24 +53,29 @@ class HomeScreen extends Component {
           </TouchableOpacity>
 
           </View>
-
+        </ImageBackground>
        
       
     )
   }
 }
 
-class HowToPlayScreen extends Component {
+class HowToPlay extends Component {
   render() {
     return (
       <View>
-        <text>aye</text>
+       <HowToPlay/>
       </View>
     )
   }
 }
 
 class WhichGame extends Component {
+  static navigationOptions = {
+  headerStyle: { 
+    backgroundColor: '#367AFC'
+  }
+};
   render() {
     return (
       <View>
@@ -84,15 +84,6 @@ class WhichGame extends Component {
     )
   }
 }
-
-class Settings extends Component {
-  render() {
-    return (
-      <settings />
-    )
-  }
-}
-
 class About extends Component {
   render() {
     return (
@@ -111,10 +102,8 @@ class Movies extends Component {
   };
   render() {
     return (
-
+    
       <movies />
-
-
     )
   }
 }
@@ -157,7 +146,7 @@ class TV extends Component {
   }
 }
 
-class Mixed extends Component {
+class Sports extends Component {
   static navigationOptions = {
     headerStyle: {
       backgroundColor: '#44C344',
@@ -165,7 +154,20 @@ class Mixed extends Component {
   };
   render() {
     return (
-      <mixed />
+      <sports />
+    )
+  }
+}
+
+class Pregame extends Component {
+  static navigationOptions = {
+    headerStyle: {
+      backgroundColor: '#44C344',
+    }
+  };
+  render() {
+    return (
+      <pregame />
     )
   }
 }
@@ -200,12 +202,6 @@ const RootStack = StackNavigator(
     WhichGame:{
       screen: whichGame
     },
-    "How To Play": {
-      screen: HowToPlayScreen
-    },
-    Settings: {
-      screen: settings
-    },
     About: {
       screen: About
     },
@@ -218,8 +214,11 @@ const RootStack = StackNavigator(
     TV: {
       screen: tv
     },
-    Mixed: {
-      screen: mixed
+    Sports: {
+      screen: sports
+    },
+    Pregame:{
+      screen:pregame
     },
     Tester: {
       screen: tester
@@ -227,12 +226,36 @@ const RootStack = StackNavigator(
     Untimed: {
       screen: UTplayScreen
     },
+    UT_Movies:{
+      screen:UT_movies
+    },
+    UT_Pregame:{
+      screen:UT_pregame
+    },
+    HowToPlay:{
+      screen:How_To_Play
+    },
+    FreePlay:{
+      screen: Free_Play_Rules
+    },
+    TeamPlay: {
+      screen: Team_Play_Rules
+    }
 
   },
   {
-    initialRouteName: 'Movies',
+    initialRouteName: 'Home',
   },
 );
+
+const Thestyles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    flexDirection: 'column', 
+    justifyContent: 'center',
+    paddingLeft:15
+  },
+})
 
 const movieStyles = StyleSheet.create({
   screen: {

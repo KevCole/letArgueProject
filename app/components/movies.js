@@ -20,44 +20,18 @@ Play =({ child }) => {
   )
 }
 
-
-changeHello = () => {
-  this.setState({
-    myState:"goodbye"
-  })
-}
-
-
-
-
 class Card extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      myState: "Play?",
-      toggleAnswers: false,
-      isHidden: true,
-      clockStatus: false
-    }
   
-    changeHello = changeHello.bind(this)
   }
 
   
-  toggleQuestions = () => {
-    this.setState({
-      toggleAnswers: true,
-      isHidden: false,
-      clockStatus: true
-    })
-  }
-
-
   render() {
     return (
       <View style={styles.clockContainer}>
         {
-          this.state.clockStatus ? <CountdownCircle
+          this.props.clockStatus ? <CountdownCircle
             seconds={60}
             reStart={true}
             radius={40}
@@ -75,7 +49,7 @@ class Card extends React.Component {
 
 
           {/* Answer View*/}
-          {this.state.toggleAnswers ?
+          {this.props.toggleAnswers ?
             <View style={styles.showAnswers}>
               <Text style={styles.answers}>{this.props.Options[0]} </Text>`
                 <Text style={styles.answers}>{this.props.Options[1]}</Text>
@@ -87,10 +61,9 @@ class Card extends React.Component {
         </View>
         )
       }
-       <TouchableOpacity style={[styles.playButtonView, styles.buttonViewStateChange]} onPress={this.toggleQuestions}>
-
+       <TouchableOpacity style={[styles.playButtonView, styles.buttonViewStateChange]} onPress={this.props.triggerToggleQuestions}>
           { 
-            this.state.isHidden ? <Play child={this.state.myState} /> : null
+            this.props.isHidden ? <Text style={styles.playButton}> {this.props.playState} </Text> : null
           }
         </TouchableOpacity>
       </View>
@@ -106,7 +79,11 @@ class movies extends Component {
     super(props);
     this.state = {
       data: shuffledData,
-      hello: "hello"
+      hello: "hello",
+      playState: "Play?",
+      toggleAnswers: false,
+      isHidden: true,
+      clockStatus: false
     };
   }
   static navigationOptions = {
@@ -115,28 +92,46 @@ class movies extends Component {
     }
   };
 
+  toggleQuestions = () => {
+    this.setState({
+      toggleAnswers: true,
+      isHidden: false,
+      clockStatus: true
+    })
+  }
+
   sorry = () => {
     this.setState({
       hide: false,
-      hello: ""
+     
     })
   }
 
   reset = () => {
     this.setState({
-      hide: true,
-      hello: "hello"
+      playState: "Play?",
+      toggleAnswers: false,
+      isHidden: true,
+      clockStatus: false
     })
   }
 
   render() {
-    // If you want a stack of cards instead of one-per-one view, activate stack mode
+    // If you want a stack of  s instead of one-per-one view, activate stack mode
     // stack={true}
     return (
-      <View style={styles.screen}>
+       <View style={styles.screen}>
         <SwipeCards
           cards={this.state.data}
-          renderCard={(cardData) => <Card {...cardData} />}
+          renderCard={(cardData) => 
+          <Card 
+                  isHidden={this.state.isHidden} 
+                  clockStatus={this.state.clockStatus} 
+                  playState = {this.state.playState}
+                  toggleAnswers = {this.state.toggleAnswers}
+                  clockStatus = {this.state.clockStatus}
+                  triggerToggleQuestions = {this.toggleQuestions}
+                                          {...cardData} />}
           showMaybe={false}
           showNope={false}
           showYup={false}
@@ -144,8 +139,7 @@ class movies extends Component {
           handleNope={this.reset}
           handleYup={this.reset}
         />
-      
-          <Play child={this.state.hello} />
+
      
       </View>
     )

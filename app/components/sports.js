@@ -2,15 +2,13 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Button, ImageBackground } from 'react-native';
 import shuffle from 'lodash/shuffle';
-import data from '../../data/questions.json';
+import data from '../data/questions.json';
 import SwipeCards from 'react-native-swipe-cards';
 import CountdownCircle from 'react-native-countdown-circle'
 import SwitchToggle from 'react-native-switch-toggle';
 
 
-
 const shuffledData = shuffle(data);
-
 
 Play = ({ child }) => {
   return (
@@ -30,7 +28,20 @@ class Card extends React.Component {
   render() {
     return (
       <View style={styles.clockContainer}>
-        
+        {
+          this.props.clockStatus ? <CountdownCircle
+            seconds={60}
+            reStart={true}
+            radius={40}
+            borderWidth={9}
+            color="#44C344"
+            shadowColor="#736BC0"
+            bgColor="#44C344"
+            textStyle={{ fontSize: 30, color: "white" }}
+
+          /> : null
+        }
+
         <View style={styles.card}>
           <Text style={styles.questions}>{this.props.question}</Text>
 
@@ -63,23 +74,22 @@ class Card extends React.Component {
 }
 
 
-class UT_movies extends Component {
+class sports extends Component {
 
 
   constructor(props) {
     super(props);
     this.state = {
       data: shuffledData,
-      
       playState: "Play?",
       toggleAnswers: false,
       isHidden: true,
-     
+      clockStatus: false
     };
   }
   static navigationOptions = {
     headerStyle: {
-      backgroundColor: '#F35555',
+      backgroundColor: '#44C344',
     }
   };
 
@@ -87,7 +97,7 @@ class UT_movies extends Component {
     this.setState({
       toggleAnswers: true,
       isHidden: false,
-     
+      clockStatus: true
     })
   }
 
@@ -103,7 +113,7 @@ class UT_movies extends Component {
       playState: "Play?",
       toggleAnswers: false,
       isHidden: true,
-     
+      clockStatus: false
     })
   }
 
@@ -117,10 +127,10 @@ class UT_movies extends Component {
           renderCard={(cardData) =>
             <Card
               isHidden={this.state.isHidden}
-
+              clockStatus={this.state.clockStatus}
               playState={this.state.playState}
               toggleAnswers={this.state.toggleAnswers}
-            
+              clockStatus={this.state.clockStatus}
               triggerToggleQuestions={this.toggleQuestions}
               {...cardData} />}
           showMaybe={false}
@@ -136,21 +146,17 @@ class UT_movies extends Component {
     )
   }
 }
-
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#F35555',
+    backgroundColor: '#44C344',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  clockContainer: {
-    marginTop: 20,
-    alignItems: "center",
+
   },
   card: {
-    flex: 0,
+     flex: 0,
     flexDirection: 'column',
     marginTop: 10,
     width: 350,
@@ -163,6 +169,18 @@ const styles = StyleSheet.create({
     shadowOpacity: 3,
     shadowRadius: 20,
   },
+  answers:{
+    fontSize: 21,
+      width: 300,
+      padding: 1.5,
+      fontWeight: 'bold',
+      fontFamily: 'Helvetica',
+      justifyContent: "flex-start",
+      color: '#FAFAFF',
+      textAlign: "left",
+      marginRight: 200,
+      borderColor: "transparent"
+    },
   questions: {
     fontSize: 30,
     fontWeight: 'bold',
@@ -170,46 +188,40 @@ const styles = StyleSheet.create({
     color: '#FAFAFF',
     textAlign: 'left'
   },
-  answers: {
-    fontSize: 21,
-    width: 300,
-    padding: 1.5,
-    fontWeight: 'bold',
-    fontFamily: 'Helvetica',
-    justifyContent: "flex-start",
-    color: '#FAFAFF',
-    textAlign: "left",
-    marginRight: 200,
-    borderColor: "transparent"
-  },
   noMoreCardsText: {
     fontSize: 22,
   },
-  linear: {
+  linear:{
     flex: 1
   },
   playButtonView: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: "center",
+  
+  },
+showAnswers: {
+  marginTop: 50,
+},
+playButton: {
 
-  },
-  showAnswers: {
-    marginTop: 50,
-  },
-  playButton: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    fontFamily: 'Helvetica',
+  fontSize: 25,
+  fontWeight: 'bold',
+  fontFamily: 'Helvetica',
+  marginTop: 20,
+  padding: 10,
+  width: 150,
+  borderRadius: 10,
+  textAlign: "center",
+  color: "#FAFAFF",
+  borderWidth: 2,
+  borderColor: "#FFFFFF"
+},
+  clockContainer: {
     marginTop: 20,
-    padding: 10,
-    width: 150,
-    borderRadius: 10,
-    textAlign: "center",
-    color: "#FAFAFF",
-    borderWidth: 2,
-    borderColor: "#FFFFFF"
+    alignItems: "center",
   },
-
 });
-export default UT_movies
+
+
+export default sports

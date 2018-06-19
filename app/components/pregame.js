@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Button, ImageBackground } from 'react-native';
 import shuffle from 'lodash/shuffle';
-import data from '../../data/questions.json';
+import data from '../data/questions.json';
 import SwipeCards from 'react-native-swipe-cards';
 import CountdownCircle from 'react-native-countdown-circle'
 import SwitchToggle from 'react-native-switch-toggle';
@@ -30,7 +30,20 @@ class Card extends React.Component {
   render() {
     return (
       <View style={styles.clockContainer}>
-        
+        {
+          this.props.clockStatus ? <CountdownCircle
+            seconds={60}
+            reStart={true}
+            radius={40}
+            borderWidth={9}
+            color="#F5A974"
+            shadowColor="#499A8F"
+            bgColor="#F5A974"
+            textStyle={{ fontSize: 30, color: "white" }}
+
+          /> : null
+        }
+
         <View style={styles.card}>
           <Text style={styles.questions}>{this.props.question}</Text>
 
@@ -63,23 +76,23 @@ class Card extends React.Component {
 }
 
 
-class UT_movies extends Component {
+class pregame extends Component {
 
 
   constructor(props) {
     super(props);
     this.state = {
       data: shuffledData,
-      
+      hello: "hello",
       playState: "Play?",
       toggleAnswers: false,
       isHidden: true,
-     
+      clockStatus: false
     };
   }
   static navigationOptions = {
     headerStyle: {
-      backgroundColor: '#F35555',
+      backgroundColor: '#F5A974',
     }
   };
 
@@ -87,7 +100,7 @@ class UT_movies extends Component {
     this.setState({
       toggleAnswers: true,
       isHidden: false,
-     
+      clockStatus: true
     })
   }
 
@@ -103,7 +116,7 @@ class UT_movies extends Component {
       playState: "Play?",
       toggleAnswers: false,
       isHidden: true,
-     
+      clockStatus: false
     })
   }
 
@@ -117,10 +130,10 @@ class UT_movies extends Component {
           renderCard={(cardData) =>
             <Card
               isHidden={this.state.isHidden}
-
+              clockStatus={this.state.clockStatus}
               playState={this.state.playState}
               toggleAnswers={this.state.toggleAnswers}
-            
+              clockStatus={this.state.clockStatus}
               triggerToggleQuestions={this.toggleQuestions}
               {...cardData} />}
           showMaybe={false}
@@ -140,7 +153,7 @@ class UT_movies extends Component {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#F35555',
+    backgroundColor: '#F5A974',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
@@ -157,7 +170,7 @@ const styles = StyleSheet.create({
     height: 350,
     padding: 30,
     borderRadius: 30,
-    backgroundColor: '#736BC0',
+    backgroundColor: '#499A8F',
     shadowColor: 'rgba(0, 0, 0, .5)',
     shadowOffset: { width: 30, height: 30 },
     shadowOpacity: 3,
@@ -212,4 +225,4 @@ const styles = StyleSheet.create({
   },
 
 });
-export default UT_movies
+export default pregame
