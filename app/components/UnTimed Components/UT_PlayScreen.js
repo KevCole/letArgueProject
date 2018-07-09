@@ -50,7 +50,7 @@ export class UTplayScreen extends Component {
                 //pagingEnabled={true}
                 horizontal={true}
                 decelerationRate={0}
-                snapToInterval={width - 10}
+                snapToInterval={60}
                 snapToAlignment={"center"}
                 contentInset={{
                     top: 0,
@@ -65,7 +65,7 @@ export class UTplayScreen extends Component {
 
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.view2} onPress={() => this.props.navigation.navigate('UT_movies')}>
+                <TouchableOpacity style={styles.view2} onPress={() => this.props.navigation.navigate('ChooseMusic_Untimed')}>
                     <Text style={styling.question}> Music</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.view3} onPress={() => this.props.navigation.navigate('Sports')}>
@@ -74,8 +74,8 @@ export class UTplayScreen extends Component {
                 <TouchableOpacity style={styles.view4} onPress={() => this.props.navigation.navigate('Sports')}>
                     <Text style={styling.question}>Sports</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.view5} onPress={() => this.props.navigation.navigate('UT_Pregame')}>
-                    <Text style={styling.question}>Pregame</Text>
+                <TouchableOpacity style={styles.view5} onPress={() => this.props.navigation.navigate('ChooseParty_Untimed')}>
+                    <Text style={styling.question}>Party</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.view4} onPress={() => this.props.navigation.navigate('Tester')}>

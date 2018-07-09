@@ -18,10 +18,11 @@ export const styling = StyleSheet.create({
 
     },
     question:{
-        fontSize:30,
+        fontSize:18,
         fontWeight: 'bold',
         fontFamily:fonts.primary,
         color:'#ffffff',
+        
         textAlign:'left'
     },
 

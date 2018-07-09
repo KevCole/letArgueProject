@@ -7,12 +7,23 @@ export const styles = StyleSheet.create({
         flex: 1,
         padding: 25,
         backgroundColor: '#4861C9',
-    
-    },
-    text: {
-        fontFamily: fonts.primary,
-        fontSize: 50,
-        color:'#F0FFF0',
         
     },
+    text: {
+        fontFamily: "Noteworthy",
+        fontSize: 50,
+        color:'#F0FFF0',
+    },
+    play:{
+        fontFamily: "Noteworthy",
+        fontSize: 50,
+        color:'#F0FFF0',
+        marginLeft:80
+    },
+    about:{
+        fontFamily: "Noteworthy",
+        fontSize: 50,
+        color:'#F0FFF0',
+        marginLeft:70
+    }
 })

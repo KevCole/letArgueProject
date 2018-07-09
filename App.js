@@ -21,6 +21,10 @@ import UTplayScreen from './app/components/UnTimed Components/UT_PlayScreen'
 import How_To_Play from './app/components/how_to_play';
 import Team_Play_Rules from './app/components/Team_Play_Rules'
 import Free_Play_Rules from './app/components/Free_Play_Rules'
+import choose_music from './app/components/choose/choose_music'
+import choose_party from './app/components/choose/choose_party'
+import choose_music_untimed from './app/components/choose/choose_music_untimed'
+import choose_party_untimed from './app/components/choose/choose_party_untimed'
 
 
 const data = require('./app/questions/questions.json');
@@ -36,7 +40,7 @@ class HomeScreen extends Component {
       <ImageBackground source={ require( './app/images/Blue_white.jpg')} style={Thestyles.screen}>
       <View>
           <TouchableOpacity onPress={() => this.props.navigation.navigate('WhichGame')}>
-            <Text style={styles.text}>
+            <Text style={styles.play}>
               Play
           </Text>
           </TouchableOpacity>
@@ -47,15 +51,13 @@ class HomeScreen extends Component {
           </Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => this.props.navigation.navigate('About')}  >
-            <Text style={styles.text}>
+            <Text style={styles.about}>
               About
           </Text>
           </TouchableOpacity>
 
           </View>
         </ImageBackground>
-       
-      
     )
   }
 }
@@ -116,10 +118,7 @@ class Music extends Component {
   };
   render() {
     return (
-
       <movies />
-
-
     )
   }
 }
@@ -240,11 +239,23 @@ const RootStack = StackNavigator(
     },
     TeamPlay: {
       screen: Team_Play_Rules
+    },
+    ChooseMusic:{
+      screen: choose_music
+    },
+    ChooseParty:{
+      screen: choose_party
+    },
+    ChooseMusic_Untimed:{
+      screen: choose_music_untimed
+    },
+    ChooseParty_Untimed:{
+      screen: choose_party_untimed
     }
 
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Play',
   },
 );
 
@@ -253,7 +264,9 @@ const Thestyles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column', 
     justifyContent: 'center',
-    paddingLeft:15
+    alignItems:'center'
+    
+   
   },
 })
 
