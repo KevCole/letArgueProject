@@ -1,12 +1,9 @@
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Button, Dimensions, TouchableOpacity, TouchableHighlight, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity,ImageBackground } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { PlayScreen } from './app/components/PlayScreen';
 import { styles } from './app/styles/MenuStyles'
-import { styling } from './app/styles/PlayScreenStyles'
-import { dimensions, colors, fonts } from './app/styles/base';
-
 
 import movies from './app/components/movies'
 import sports from './app/components/sports'
@@ -20,11 +17,11 @@ import whichGame from './app/components/whichGame'
 import UTplayScreen from './app/components/UnTimed Components/UT_PlayScreen'
 import How_To_Play from './app/components/how_to_play';
 import Team_Play_Rules from './app/components/Team_Play_Rules'
-import Free_Play_Rules from './app/components/Free_Play_Rules'
 import choose_music from './app/components/choose/choose_music'
 import choose_party from './app/components/choose/choose_party'
 import choose_music_untimed from './app/components/choose/choose_music_untimed'
 import choose_party_untimed from './app/components/choose/choose_party_untimed'
+import movieType from './app/components/PlayType/movieType'
 
 
 const data = require('./app/questions/questions.json');
@@ -39,7 +36,7 @@ class HomeScreen extends Component {
     return (
       <ImageBackground source={ require( './app/images/Blue_white.jpg')} style={Thestyles.screen}>
       <View>
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('WhichGame')}>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Play')}>
             <Text style={styles.play}>
               Play
           </Text>
@@ -234,9 +231,6 @@ const RootStack = StackNavigator(
     HowToPlay:{
       screen:How_To_Play
     },
-    FreePlay:{
-      screen: Free_Play_Rules
-    },
     TeamPlay: {
       screen: Team_Play_Rules
     },
@@ -251,11 +245,14 @@ const RootStack = StackNavigator(
     },
     ChooseParty_Untimed:{
       screen: choose_party_untimed
+    },
+    MovieType:{
+      screen: movieType
     }
 
   },
   {
-    initialRouteName: 'Play',
+    initialRouteName: 'Home',
   },
 );
 

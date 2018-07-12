@@ -12,7 +12,6 @@
     "react-native": "0.55.1",
     "react-native-countdown-circle": "^3.0.0",
     "react-native-modest-checkbox": "^2.0.0",
-    "react-native-smart-corner-label": "^1.1.2",
     "react-native-swipe-cards": "^0.1.1",
     "react-native-switch-toggle": "^1.0.5",
     "react-navigation": "^1.5.11"

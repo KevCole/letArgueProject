@@ -49,13 +49,9 @@ class Card extends React.Component {
         )
       }
        <TouchableOpacity style={[styles.playButtonView, styles.buttonViewStateChange]} onPress={this.props.triggerToggleQuestions}>
-
           {
             this.props.isHidden ? <Text style={styles.playButton}> {this.props.playState} </Text> : null
           }
-
-
-
         </TouchableOpacity>
       </View>
     )

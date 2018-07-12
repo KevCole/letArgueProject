@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity, ImageBackground } from 'react-native';
 import { styling } from '../styles/PlayScreenStyles';
-import SwipeCards from 'react-native-swipe-cards';
+
+
 
 
 
@@ -37,10 +38,10 @@ export class PlayScreen extends Component {
                         top: 0,
                         left: 0,
                         bottom: 0,
-                        right: 30,
+                        right: 10,
                     }}>
                     <View style={styles.cardContainer1}>
-                        <TouchableOpacity style={styles.view} onPress={() => this.props.navigation.navigate('Movies')}>
+                        <TouchableOpacity style={styles.view} onPress={() => this.props.navigation.navigate('MovieType')}>
                             <Text style={styling.question} >Movies</Text>
                         </TouchableOpacity>
 
@@ -61,15 +62,28 @@ export class PlayScreen extends Component {
 
                     </View>
 
-                    <TouchableOpacity style={styles.view5} onPress={() => this.props.navigation.navigate('ChooseParty')}>
-                        <Text style={styling.question}>Party</Text>
-                    </TouchableOpacity>
+                    <View style={styles.cardContainer3}>
 
-                    <TouchableOpacity style={styles.view4} onPress={() => this.props.navigation.navigate('Tester')}>
+                        <TouchableOpacity style={styles.view5} onPress={() => this.props.navigation.navigate('TV')}>
+                            <Text style={styling.question}>Bachelorette</Text>
+                        </TouchableOpacity>
 
-                        <Text>Show</Text>
+                        <TouchableOpacity style={styles.view6} onPress={() => this.props.navigation.navigate('Sports')}>
+                            <Text style={styling.question}>Bachelor</Text>
+                        </TouchableOpacity>
 
-                    </TouchableOpacity>
+                    </View>
+                    <View style={styles.cardContainer4}>
+                        <TouchableOpacity style={styles.view7} onPress={() => this.props.navigation.navigate('ChooseParty')}>
+                            <Text style={styling.question}>Party</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.view8} onPress={() => this.props.navigation.navigate('ChooseParty')}>
+                            <Text style={styling.question}>Party</Text>
+                        </TouchableOpacity>
+                    </View>
+
+        
                 </ScrollView>
             </ImageBackground>
 
@@ -86,72 +100,112 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        width:380
 
     },
     view: {
-        marginLeft: 25,
-        width: width - 240,
-        height: height - 540,
+        marginTop: 20,
+        marginLeft: 16,
+        width: width - 215,
+        height: height - 530,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#F35555',
         shadowColor: 'rgba(0, 0, 0, .5)',
-        shadowOffset: { width: 10, height: 10 },
+        shadowOffset: { width: 1, height: 5 },
         shadowOpacity: 2,
-        shadowRadius: 10,
     },
     view2: {
-        marginLeft: 188,
-        marginTop: -125,
-        width: width - 240,
-        height: height - 540,
+        marginLeft: 201,
+        marginTop: -135,
+        width: width - 215,
+        height: height - 530,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#F3CB55',
         shadowColor: 'rgba(0, 0, 0, .5)',
-        shadowOffset: { width: 10, height: 10 },
+        shadowOffset: { width: 1, height: 5 },
         shadowOpacity: 2,
-        shadowRadius: 10
+        shadowRadius: 1
     },
     view3: {
 
-        marginLeft: 25,
-        width: width - 240,
-        height: height - 540,
+        marginLeft: 15.5,
+        width: width - 215,
+        height: height - 530,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#4B4DAA',
         shadowColor: 'rgba(0, 0, 0, .5)',
-        shadowOffset: { width: 10, height: 10 },
+        shadowOffset: { width: 1, height: 5 },
         shadowOpacity: 2,
-        shadowRadius: 10,
+        shadowRadius: 1,
     },
     view4: {
-        marginLeft: 188,
-        marginTop: -125,
+        marginLeft: 201,
+        marginTop: -135,
         margin: 20,
-        width: width - 240,
-        height: height - 540,
+        width: width - 215,
+        height: height - 530,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#44C344',
         shadowColor: 'rgba(0, 0, 0, .5)',
-        shadowOffset: { width: 10, height: 10 },
+        shadowOffset: { width: 1, height: 5 },
         shadowOpacity: 2,
-        shadowRadius: 10
+        shadowRadius: 1
     },
     view5: {
-        marginTop: 150,
-        margin: 10,
-        width: width - 45,
-        height: height - 400,
+        marginLeft: 15.5,
+        width: width - 215,
+        height: height - 530,
         padding: 20,
         borderRadius: 20,
-        backgroundColor: '#F5A974',
+        backgroundColor: '#F3CB55',
         shadowColor: 'rgba(0, 0, 0, .5)',
-        shadowOffset: { width: 10, height: 10 },
+        shadowOffset: { width: 1, height: 5 },
         shadowOpacity: 3,
-        shadowRadius: 20
+        shadowRadius: 1
+    },
+    view6: {
+        marginLeft: 201,
+        marginTop: -135,
+        margin: 20,
+        width: width - 215,
+        borderRadius: 20,
+        height: height - 530,
+        padding: 20,
+        backgroundColor: '#F35555',
+        shadowColor: 'rgba(0, 0, 0, .5)',
+        shadowOffset: { width: 1, height: 5 },
+        shadowOpacity: 2,
+        shadowRadius: 1
+    },
+    view7: {
+        marginLeft: 15.5,
+        width: width - 215,
+        height: height - 530,
+        padding: 20,
+        borderRadius: 20,
+        backgroundColor: '#44C344',
+        shadowColor: 'rgba(0, 0, 0, .5)',
+        shadowOffset: { width: 1, height: 5 },
+        shadowOpacity: 3,
+        shadowRadius: 1
+    },
+    view8: {
+        marginLeft: 201,
+        marginTop: -135,
+        margin: 20,
+        width: width - 215,
+        borderRadius: 20,
+        height: height - 530,
+        padding: 20,
+        backgroundColor: '#F35555',
+        shadowColor: 'rgba(0, 0, 0, .5)',
+        shadowOffset: { width: 1, height: 5 },
+        shadowOpacity: 2,
+        shadowRadius: 1
     },
     label: {
         marginTop: 10,
@@ -161,11 +215,18 @@ const styles = StyleSheet.create({
     },
     cardContainer1: {
         marginTop: 150,
-        paddingBottom:10
+        width:"auto"
+        
+       
     },
     cardContainer2: {
-        marginTop: 20
+        marginTop: 20,
+        width:"auto"
+       
     },
+    cardContainer3:{
+        width:"auto"
+    }
 
 
 });
