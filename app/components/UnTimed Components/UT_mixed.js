@@ -1,8 +1,7 @@
 
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import data from '../../questions/questions.json'
-
+import data from '../../questions/questions.json';
 import SwipeCards from 'react-native-swipe-cards';
 
 

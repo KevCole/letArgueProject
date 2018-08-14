@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import {  StyleSheet, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
 
 
-
- class movieType extends Component {
+ class musicType extends Component {
     static navigationOptions = {
         headerStyle: {
           backgroundColor: '#e94046'
@@ -12,14 +11,13 @@ import {  StyleSheet, Text, TouchableOpacity, Image, ImageBackground } from 'rea
         return (
             <ImageBackground source={ require( '../../images/orange_yellow.jpg')} style={styles.screen}>
                 <TouchableOpacity style={styles.viewWidth} >
-                
                 <Image style={styles.stopwatch} source={require('../../images/stopwatch_yellow.png')} onPress={() => this.props.navigation.navigate('Movies')}/>
-                  <Text style={styles.text} onPress={() => this.props.navigation.navigate('Movies')}>Against The Clock</Text>
+                  <Text style={styles.text} onPress={() => this.props.navigation.navigate('Music')}>Against The Clock</Text>
                   </TouchableOpacity> 
 
                   <TouchableOpacity style={styles.viewWidth} >
                   <Image style={styles.infinite} source={require('../../images/infinity_yellow.png')} onPress={() => this.props.navigation.navigate('UT_Movies')} />
-                    <Text style={styles.text} onPress={() => this.props.navigation.navigate('UT_Movies')}>Endless Arguments</Text>
+                    <Text style={styles.text} onPress={() => this.props.navigation.navigate('Untimed')}>Endless Arguments</Text>
                     
                 </TouchableOpacity>
             </ImageBackground>
@@ -77,4 +75,4 @@ const styles = StyleSheet.create({
    
 })
 
-export default movieType
+export default musicType

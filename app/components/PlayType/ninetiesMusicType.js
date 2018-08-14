@@ -3,7 +3,7 @@ import {  StyleSheet, Text, TouchableOpacity, Image, ImageBackground } from 'rea
 
 
 
- class movieType extends Component {
+ class ninetiesMusicType extends Component {
     static navigationOptions = {
         headerStyle: {
           backgroundColor: '#e94046'
@@ -77,4 +77,4 @@ const styles = StyleSheet.create({
    
 })
 
-export default movieType
+export default ninetiesMusicType

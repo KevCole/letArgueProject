@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity, ImageBackground } from 'react-native';
 import { styling } from '../styles/PlayScreenStyles';
 
-
-
-
-
-
 const { width } = Dimensions.get('window');
 const { height } = Dimensions.get('window');
 
@@ -52,11 +47,11 @@ export class PlayScreen extends Component {
 
                     <View style={styles.cardContainer2}>
 
-                        <TouchableOpacity style={styles.view3} onPress={() => this.props.navigation.navigate('TV')}>
+                        <TouchableOpacity style={styles.view3} onPress={() => this.props.navigation.navigate('TV_Type')}>
                             <Text style={styling.question}>TV</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.view4} onPress={() => this.props.navigation.navigate('Sports')}>
+                        <TouchableOpacity style={styles.view4} onPress={() => this.props.navigation.navigate('SportsType')}>
                             <Text style={styling.question}>Sports</Text>
                         </TouchableOpacity>
 
@@ -64,18 +59,18 @@ export class PlayScreen extends Component {
 
                     <View style={styles.cardContainer3}>
 
-                        <TouchableOpacity style={styles.view5} onPress={() => this.props.navigation.navigate('TV')}>
+                        <TouchableOpacity style={styles.view5} onPress={() => this.props.navigation.navigate('BacheloretteType')}>
                             <Text style={styling.question}>Bachelorette</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.view6} onPress={() => this.props.navigation.navigate('Sports')}>
+                        <TouchableOpacity style={styles.view6} onPress={() => this.props.navigation.navigate('BachelorType')}>
                             <Text style={styling.question}>Bachelor</Text>
                         </TouchableOpacity>
 
                     </View>
                     <View style={styles.cardContainer4}>
-                        <TouchableOpacity style={styles.view7} onPress={() => this.props.navigation.navigate('ChooseParty')}>
-                            <Text style={styling.question}>Party</Text>
+                        <TouchableOpacity style={styles.view7} onPress={() => this.props.navigation.navigate('NinetiesMusicType')}>
+                            <Text style={styling.question}>90's Music</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={styles.view8} onPress={() => this.props.navigation.navigate('ChooseParty')}>
@@ -83,12 +78,8 @@ export class PlayScreen extends Component {
                         </TouchableOpacity>
                     </View>
 
-        
                 </ScrollView>
             </ImageBackground>
-
-
-
         );
     }
 }
@@ -101,13 +92,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width:380
-
     },
     view: {
         marginTop: 20,
         marginLeft: 16,
-        width: width - 215,
-        height: height - 530,
+        width: 160,
+        height: 140,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#F35555',
@@ -116,10 +106,10 @@ const styles = StyleSheet.create({
         shadowOpacity: 2,
     },
     view2: {
-        marginLeft: 201,
-        marginTop: -135,
-        width: width - 215,
-        height: height - 530,
+        marginLeft: 200,
+        marginTop: -138,
+        width: 160,
+        height: 140,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#F3CB55',
@@ -131,8 +121,8 @@ const styles = StyleSheet.create({
     view3: {
 
         marginLeft: 15.5,
-        width: width - 215,
-        height: height - 530,
+        width: 160,
+        height: 140,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#4B4DAA',
@@ -142,11 +132,11 @@ const styles = StyleSheet.create({
         shadowRadius: 1,
     },
     view4: {
-        marginLeft: 201,
-        marginTop: -135,
+        marginLeft: 200,
+        marginTop: -138,
         margin: 20,
-        width: width - 215,
-        height: height - 530,
+        width: 160,
+        height: 140,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#44C344',
@@ -157,8 +147,8 @@ const styles = StyleSheet.create({
     },
     view5: {
         marginLeft: 15.5,
-        width: width - 215,
-        height: height - 530,
+        width: 160,
+        height: 140,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#F3CB55',
@@ -168,10 +158,10 @@ const styles = StyleSheet.create({
         shadowRadius: 1
     },
     view6: {
-        marginLeft: 201,
-        marginTop: -135,
-        margin: 20,
-        width: width - 215,
+        marginLeft: 200,
+        marginTop: -138,
+        width: 160,
+        height: 140,
         borderRadius: 20,
         height: height - 530,
         padding: 20,
@@ -183,8 +173,8 @@ const styles = StyleSheet.create({
     },
     view7: {
         marginLeft: 15.5,
-        width: width - 215,
-        height: height - 530,
+        width: 160,
+        height: 140,
         padding: 20,
         borderRadius: 20,
         backgroundColor: '#44C344',
@@ -194,14 +184,14 @@ const styles = StyleSheet.create({
         shadowRadius: 1
     },
     view8: {
-        marginLeft: 201,
-        marginTop: -135,
+        marginLeft: 200,
+        marginTop: -138,
         margin: 20,
-        width: width - 215,
+        width: 160,
+        height: 140,
         borderRadius: 20,
-        height: height - 530,
         padding: 20,
-        backgroundColor: '#F35555',
+        backgroundColor: '#4B4DAA',
         shadowColor: 'rgba(0, 0, 0, .5)',
         shadowOffset: { width: 1, height: 5 },
         shadowOpacity: 2,
@@ -226,6 +216,9 @@ const styles = StyleSheet.create({
     },
     cardContainer3:{
         width:"auto"
+    },
+    cardContainer4:{
+        marginTop: 20,
     }
 
 

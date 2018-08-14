@@ -22,6 +22,12 @@ import choose_party from './app/components/choose/choose_party'
 import choose_music_untimed from './app/components/choose/choose_music_untimed'
 import choose_party_untimed from './app/components/choose/choose_party_untimed'
 import movieType from './app/components/PlayType/movieType'
+import musicType from './app/components/PlayType/musicType'
+import bachelorType from './app/components/PlayType/bachelorType'
+import bacheloretteType from './app/components/PlayType/bachelorType'
+import ninetiesMusicType from './app/components/PlayType/ninetiesMusicType'
+import sportsType from './app/components/PlayType/sportsType'
+import tvType from './app/components/PlayType/tvType'
 
 
 const data = require('./app/questions/questions.json');
@@ -248,7 +254,26 @@ const RootStack = StackNavigator(
     },
     MovieType:{
       screen: movieType
+    },
+    MusicType:{
+      screen:musicType
+    },
+    BachelorType:{
+      screen:bachelorType
+    },
+    BacheloretteType:{
+      screen:bacheloretteType
+    },
+    NinetiesMusicType:{
+      screen:ninetiesMusicType
+    },
+    SportsType:{
+      screen:sportsType
+    },
+    TV_Type:{
+      screen:tvType
     }
+
 
   },
   {
